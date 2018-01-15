@@ -62,7 +62,47 @@ h1{
   font-size: 100px;
   padding: 0px;
   margin: 0px;
+	text-decoration: none;
 }
+@keyframes wavy-slide {
+	to {
+		margin-left: -51.5%;
+	}
+}
+.flex{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+  align-content: center;
+}
+a.Name{
+  font-size: 100px;
+  padding: 0px;
+  margin: 0px;
+	text-decoration: none;
+	position: relative;
+	padding-bottom: .25em;
+	overflow: hidden;
+	color: white;
+}
+	a.Name:after {
+		position: absolute;
+    padding: 0px;
+    margin: 0px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		white-space: nowrap;
+		content: attr(data-text)attr(data-text);
+		color: transparent;
+		line-height: 1.8;
+		text-decoration: underline;
+		text-decoration-style: wavy;
+		text-decoration-color: #fff;
+		animation: wavy-slide 4s linear infinite;
+	}
 h3{
   color: white;
   font-size: 30px;
@@ -124,16 +164,17 @@ Specify sizes for mobile version
 
 */
 @media screen and (max-width: 768px) {
-  h1{
+a.Name{
     overflow: hidden;
     font-size: 45px;
-    display: block;
     padding: 0px;
   }
   .content{
     width: 80%;
     overflow: hidden;
     display: block;
+    align-items: center;
+    text-align: center;
   }
   h3{
     font-size: 15px;
