@@ -1,0 +1,156 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "https://fonts.googleapis.com/css?family=Heebo";
+
+/* Applies to All */
+body, div{
+  font-family: Heebo;
+  font-weight: bolder;
+  background-color: #3079f4;*/
+  color: white;
+  padding: 0px;
+  margin: auto;
+}
+
+/* Applies to Menu */
+div.Menu{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  float: right;
+  margin-right: 25px;
+  margin-top: 35px;
+  padding-right: 15px;
+  border-right: 4px solid white;
+  line-height: 40px;
+}
+div.Menu a{
+  color:white;
+  text-decoration: none;
+  font-size: 17px;
+
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+div.Menu a:hover{
+  -webkit-transform: translateX(-8px);
+  transform: translateX(-8px);
+}
+
+/* Applies to Home Section */
+.Home{
+  height:100%;
+  width:100%;
+  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.content{
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
+  transform: translate(0%, 15%);
+}
+h1{
+  color: white;
+  font-size: 100px;
+  padding: 0px;
+  margin: 0px;
+}
+h3{
+  color: white;
+  font-size: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+.img-circle {
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  height: 150px;
+  margin-bottom: 20px;
+}
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+.Icon{
+  color: white;
+  font-size: 25px;
+  padding: 0px;
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.Icon:hover{
+  color: black;
+
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+/*
+
+Specify sizes for mobile version
+
+*/
+@media screen and (max-width: 768px) {
+  h1{
+    overflow: hidden;
+    font-size: 45px;
+    display: block;
+    padding: 0px;
+  }
+  .content{
+    width: 80%;
+    overflow: hidden;
+    display: block;
+  }
+  h3{
+    font-size: 15px;
+    padding: 0px;
+  }
+  .img-circle {
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 0px;
+  }
+  div.Menu{
+    line-height: 10px;
+    padding: 0px;
+    border-width: 1px;
+  }
+  div.Menu a{
+    font-size: 10px;
+    padding: 5px;
+  }
+}
