@@ -1,4 +1,4 @@
-# This is my (dynamic) personal website 
+# (Dynamic) personal website (Dec 2017 - Jan 2018)
 
 : Built with HTML, CSS, Javascript, & Google Firebase<br />
 : Utilizes Firebase & Javascript to dynamically upload pictures/descriptions<br />
