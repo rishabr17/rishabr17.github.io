@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './Assets/css/Navbar.css'
+import './Assets/css/Homepage.css'
+import './Assets/css/Education.css'
 
 ReactDOM.render(
   <React.StrictMode>
