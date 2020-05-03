@@ -7,10 +7,10 @@ class Homepage extends Component {
     }
 
     listenScrollEvent = e => {
-        if (window.scrollY > window.innerHeight*0.45 && this.state.opacity > 0) {
-          this.setState({opacity: this.state.opacity-0.02})
+        if (window.scrollY > window.innerHeight*0.30 && this.state.opacity > 0) {
+          this.setState({opacity: (window.innerHeight*10-window.scrollY*12)/(window.innerHeight*10)})
         }else if(window.scrollY < window.innerHeight && this.state.opacity < 1){
-            this.setState({opacity: this.state.opacity+0.05})
+            this.setState({opacity: (window.innerHeight-window.scrollY*1.1)*window.innerHeight})
         }
       }
     

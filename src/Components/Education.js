@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Education extends Component {
     render(){
         return(
-            <div id="education" style={{height:"100vh", paddingTop:"60px", borderBottom:"solid 0.5px gray", marginRight:"5%"}} className="education-container">
+            <div id="education" style={{paddingBottom:"10vh", paddingTop:"60px", borderBottom:"solid 0.5px gray", marginRight:"5%"}} className="education-container">
                 <h2 style={{fontWeight:"400", fontSize:"250%", paddingTop:"5vh", margin:"0px"}}>Education</h2>
                 <h3 style={{fontWeight:"400", fontSize:"150%", paddingTop:"2.5%", textIndent:"2.5%", margin:"0px"}}>Rutgers University - New Brunswick</h3>
                 <p style={{fontWeight:"300", fontSize:"110%", paddingTop:"1.5%", textIndent:"2.5%", margin:"0px"}}>Bachelors of Science in Computer Engineering</p> 

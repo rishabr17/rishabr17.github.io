@@ -15,12 +15,12 @@ class Navbar extends Component {
           this.setState({educationColor: ''})
           this.setState({skillsColor: ''})
           this.setState({expColor: ''})
-        } else if (window.scrollY < (window.innerHeight*1.75)) {
+        } else if (window.scrollY < (window.innerHeight*1.6)) {
             this.setState({homeColor: ''})
             this.setState({educationColor: '#FFEE58'})
             this.setState({skillsColor: ''})
             this.setState({expColor: ''})
-        } else if (window.scrollY < (window.innerHeight*2.75)) {
+        } else if (window.scrollY < (window.innerHeight*2.2)) {
             this.setState({homeColor: ''})
             this.setState({educationColor: ''})
             this.setState({skillsColor: '#FFEE58'})
