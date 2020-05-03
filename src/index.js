@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import './Assets/css/Navbar.css'
 import './Assets/css/Homepage.css'
 import './Assets/css/Education.css'
+import './Assets/css/Experience.css'
 
 ReactDOM.render(
   <React.StrictMode>

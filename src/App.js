@@ -5,6 +5,8 @@ import Homepage from './Components/Homepage'
 import Education from './Components/Education'
 import Skills from './Components/Skills'
 import Experience from './Components/Experience'
+import Projects from './Components/Projects'
+import Contact from './Components/Contact'
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Education />
             <Skills />
             <Experience />
+            <Projects />
+            <Contact />
           </Route>
         </Switch>
       </BrowserRouter>

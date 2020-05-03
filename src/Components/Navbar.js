@@ -6,30 +6,59 @@ class Navbar extends Component {
         homeColor: "#FFEE58",
         educationColor:"",
         skillsColor: "",
-        expColor: ""
+        expColor: "",
+        projectsColor: "",
+        contactColor: ""
     }
 
+    handleScroll = (e) => {
+        const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
+        
+      }
+
     listenScrollEvent = e => {
-        if (window.scrollY < window.innerHeight*0.75) {
-          this.setState({homeColor: '#FFEE58'})
-          this.setState({educationColor: ''})
-          this.setState({skillsColor: ''})
-          this.setState({expColor: ''})
-        } else if (window.scrollY < (window.innerHeight*1.6)) {
+        if (window.scrollY < document.getElementById("home").clientHeight*0.85) {
+            this.setState({homeColor: '#FFEE58'})
+            this.setState({educationColor: ''})
+            this.setState({skillsColor: ''})
+            this.setState({expColor: ''})
+            this.setState({projectsColor: ''})
+            this.setState({contactColor: ''})
+        } else if (window.scrollY < document.getElementById("home").clientHeight+document.getElementById("education").clientHeight*0.85) {
             this.setState({homeColor: ''})
             this.setState({educationColor: '#FFEE58'})
             this.setState({skillsColor: ''})
             this.setState({expColor: ''})
-        } else if (window.scrollY < (window.innerHeight*2.2)) {
+            this.setState({projectsColor: ''})
+            this.setState({contactColor: ''})
+        } else if (window.scrollY < document.getElementById("home").clientHeight+document.getElementById("education").clientHeight+document.getElementById("skills").clientHeight*0.85) {
             this.setState({homeColor: ''})
             this.setState({educationColor: ''})
             this.setState({skillsColor: '#FFEE58'})
             this.setState({expColor: ''})
-        } else if (window.scrollY < (window.innerHeight*3.75)) {
+            this.setState({projectsColor: ''})
+            this.setState({contactColor: ''})
+        } else if (window.scrollY < document.getElementById("home").clientHeight+document.getElementById("education").clientHeight+document.getElementById("skills").clientHeight+document.getElementById("experience").clientHeight*0.85) {
             this.setState({homeColor: ''})
             this.setState({educationColor: ''})
             this.setState({skillsColor: ''})
             this.setState({expColor: '#FFEE58'})
+            this.setState({projectsColor: ''})
+            this.setState({contactColor: ''})
+        } else if (window.scrollY < document.getElementById("home").clientHeight+document.getElementById("education").clientHeight+document.getElementById("skills").clientHeight+document.getElementById("experience").clientHeight+document.getElementById("projects").clientHeight*0.25) {
+            this.setState({homeColor: ''})
+            this.setState({educationColor: ''})
+            this.setState({skillsColor: ''})
+            this.setState({expColor: ''})
+            this.setState({projectsColor: '#FFEE58'})
+            this.setState({contactColor: ''})
+        } else if (window.scrollY < document.getElementById("home").clientHeight+document.getElementById("education").clientHeight+document.getElementById("skills").clientHeight+document.getElementById("experience").clientHeight+document.getElementById("projects").clientHeight+document.getElementById("contact").clientHeight*0.85) {
+            this.setState({homeColor: ''})
+            this.setState({educationColor: ''})
+            this.setState({skillsColor: ''})
+            this.setState({expColor: ''})
+            this.setState({projectsColor: ''})
+            this.setState({contactColor: '#FFEE58'})
         }
       }
     
@@ -45,8 +74,8 @@ class Navbar extends Component {
                     <a href="#education" style={{backgroundColor:this.state.educationColor}} className="navbar-listitem"> Education</a>
                     <a href="#skills" style={{backgroundColor:this.state.skillsColor}} className="navbar-listitem">Skills</a>
                     <a href="#experience" style={{backgroundColor:this.state.expColor}} className="navbar-listitem">Experience</a>
-                    <a className="navbar-listitem">Projects</a>
-                    <a className="navbar-lastitem">Contact</a>
+                    <a href="#projects" className="navbar-listitem" style={{backgroundColor:this.state.projectsColor}}>Projects</a>
+                    <a href="#contact" className="navbar-lastitem" style={{backgroundColor:this.state.contactColor}}>Contact</a>
                 </div>
             </div>
         )
