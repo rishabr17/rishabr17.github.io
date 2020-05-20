@@ -26,7 +26,7 @@ class PreviewLinkJS extends Component {
             Alternatively, you can also preview social media links!&nbsp;
             <PreviewLink class="preview-link" href="https://www.facebook.com/VeganDotCom/"  style={{fontWeight:"500", display:"inline-block"}}>Facebook</PreviewLink>,&nbsp;
             <PreviewLink class="preview-link" href="https://twitter.com/RobLowe"  style={{fontWeight:"500", display:"inline-block"}}>Twitter</PreviewLink>,&nbsp;
-            <PreviewLink class="preview-link" href="https://www.instagram.com/therock/"  style={{fontWeight:"500", display:"inline-block"}}>Instagram</PreviewLink>
+            <PreviewLink class="preview-link" href="https://www.instagram.com/shawstrength/"  style={{fontWeight:"500", display:"inline-block"}}>Instagram</PreviewLink>
         </p>
       </div>
     );
