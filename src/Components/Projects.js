@@ -28,7 +28,6 @@ class Projects extends Component {
         
         return <li style={{fontWeight:"300", fontSize:"110%", paddingTop:"0%", marginLeft:"5%", width:"60vw", lineHeight:"1.5em"}} dangerouslySetInnerHTML={{ __html: str }}></li>;
     }
-
     projectComponents = () =>{
         const elements = this.state.projects.map(r => (
             
