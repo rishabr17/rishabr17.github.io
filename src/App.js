@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import Navbar from './Components/Navbar'
 import Homepage from './Components/Homepage'
 import Education from './Components/Education'
@@ -12,12 +12,12 @@ import PreviewLinkJS from './Components/PreviewLinkJS'
 function App() {
   return (
     <div className="App" style={{}}>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path={'/preview-link-js'}>
             <PreviewLinkJS />
           </Route>
-          <Route path='/'> {/* Default Page */}
+          <Route path=''> {/* Default Page */}
             <Navbar />
             <Homepage />
             <Education />
@@ -27,7 +27,7 @@ function App() {
             <Contact />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

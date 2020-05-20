@@ -17,6 +17,8 @@ class Navbar extends Component {
       }
 
     listenScrollEvent = e => {
+        if(document.getElementById("home") == null)
+            return;
         if (window.scrollY < document.getElementById("home").clientHeight*0.85) {
             this.setState({homeColor: '#FFEE58'})
             this.setState({educationColor: ''})
@@ -70,12 +72,12 @@ class Navbar extends Component {
         return(
             <div className="navbar-menu">
                 <div className="navbar-sticky">
-                    <a href="#home" style={{backgroundColor:this.state.homeColor}} className="navbar-listitem">Home</a>
-                    <a href="#education" style={{backgroundColor:this.state.educationColor}} className="navbar-listitem"> Education</a>
-                    <a href="#skills" style={{backgroundColor:this.state.skillsColor}} className="navbar-listitem">Skills</a>
-                    <a href="#experience" style={{backgroundColor:this.state.expColor}} className="navbar-listitem">Experience</a>
-                    <a href="#projects" className="navbar-listitem" style={{backgroundColor:this.state.projectsColor}}>Projects</a>
-                    <a href="#contact" className="navbar-lastitem" style={{backgroundColor:this.state.contactColor}}>Contact</a>
+                    <a href="../#home" style={{backgroundColor:this.state.homeColor}} className="navbar-listitem">Home</a>
+                    <a href="../#education" style={{backgroundColor:this.state.educationColor}} className="navbar-listitem"> Education</a>
+                    <a href="../#skills" style={{backgroundColor:this.state.skillsColor}} className="navbar-listitem">Skills</a>
+                    <a href="../#experience" style={{backgroundColor:this.state.expColor}} className="navbar-listitem">Experience</a>
+                    <a href="../#projects" className="navbar-listitem" style={{backgroundColor:this.state.projectsColor}}>Projects</a>
+                    <a href="../#contact" className="navbar-lastitem" style={{backgroundColor:this.state.contactColor}}>Contact</a>
                 </div>
             </div>
         )
