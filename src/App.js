@@ -14,7 +14,7 @@ function App() {
     <div className="App" style={{}}>
       <BrowserRouter>
         <Switch>
-          <Route path='/preview-link-js'>
+          <Route path={process.env.PUBLIC_URL+'/preview-link-js'}>
             <PreviewLinkJS />
           </Route>
           <Route path='/'> {/* Default Page */}
