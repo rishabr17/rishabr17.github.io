@@ -7,14 +7,18 @@ import Skills from './Components/Skills'
 import Experience from './Components/Experience'
 import Projects from './Components/Projects'
 import Contact from './Components/Contact'
+import PreviewLinkJS from './Components/PreviewLinkJS'
 
 function App() {
   return (
     <div className="App" style={{}}>
       <BrowserRouter>
-        <Navbar />
         <Switch>
+          <Route path='/preview-link-js'>
+            <PreviewLinkJS />
+          </Route>
           <Route path='/'> {/* Default Page */}
+            <Navbar />
             <Homepage />
             <Education />
             <Skills />
