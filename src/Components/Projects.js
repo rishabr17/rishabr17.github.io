@@ -22,14 +22,23 @@ class Projects extends Component {
         })
     }
 
+    parseHtml = (str) =>{
+        if(str.charAt[0] == "<")
+            return str;
+        var parser = new DOMParser();
+        var htmlDoc = parser.parseFromString(str, 'text/html');
+        return htmlDoc;
+    }
+
     projectComponents = () =>{
         const elements = this.state.projects.map(r => (
+            
             <div style={{paddingTop:"2.5%"}}>
                 <a href={r.Link} style={{fontWeight:"400", fontSize:"150%", paddingLeft:"2.5%",  cursor:"pointer"}}>{r.Name}</a>
                 <p style={{fontWeight:"300", fontSize:"110%", paddingTop:"1%", textIndent:"2.5%", margin:"0px"}}>{r.Blurb}</p> 
                 <ul>
                     {r.Description.map(d => (
-                        <li style={{fontWeight:"300", fontSize:"110%", paddingTop:"0%", marginLeft:"5%", width:"60vw", lineHeight:"1.5em"}}>{d}</li>
+                        <li style={{fontWeight:"300", fontSize:"110%", paddingTop:"0%", marginLeft:"5%", width:"60vw", lineHeight:"1.5em"}}>{this.parseHtml(d)}</li>
                     ))}
                 </ul>
             </div>
